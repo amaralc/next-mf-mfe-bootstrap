@@ -420,7 +420,7 @@ export function Index({ title }) {
 Index.getInitialProps = async () => {
   console.log('getting initial props...');
   return {
-    title: 'Welcome remote_4201 👋',
+    title: 'Welcome shell_4200 👋',
   };
 };
 

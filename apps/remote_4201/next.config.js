@@ -25,7 +25,7 @@ const nextConfig = {
             }/remoteEntry.js`,
           },
           exposes: {
-            './remote-4201': './pages/index',
+            './index': './pages/index',
             './pages-map': './pages-map.ts',
           },
         }),

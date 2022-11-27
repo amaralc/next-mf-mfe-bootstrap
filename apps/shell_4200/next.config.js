@@ -23,6 +23,9 @@ const nextConfig = {
             shell_4200: `shell_4200@http://localhost:4200/_next/static/${
               isServer ? 'ssr' : 'chunks'
             }/remoteEntry.js`,
+            remote_4201: `remote_4201@http://localhost:4201/_next/static/${
+              isServer ? 'ssr' : 'chunks'
+            }/remoteEntry.js`,
           },
           exposes: {
             './shell-4200': './pages/index',
