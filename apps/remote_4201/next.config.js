@@ -1,3 +1,4 @@
+const NextFederationPlugin = require('@module-federation/nextjs-mf');
 //@ts-check
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -11,6 +12,26 @@ const nextConfig = {
     // Set this to true if you would like to to use SVGR
     // See: https://github.com/gregberge/svgr
     svgr: false,
+  },
+  webpack(config, options) {
+    const { isServer } = options;
+      config.plugins.push(
+        new NextFederationPlugin({
+          name: 'remote_4201',
+          filename: 'static/chunks/remoteEntry.js',
+          remotes: {
+            remote_4201: `remote_4201@http://localhost:4201/_next/static/${
+              isServer ? 'ssr' : 'chunks'
+            }/remoteEntry.js`,
+          },
+          exposes: {
+            './remote-4201': './pages/index',
+            './pages-map': './pages-map.ts',
+          },
+        }),
+      );
+
+      return config;
   },
 };
 

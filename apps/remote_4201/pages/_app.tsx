@@ -1,18 +1,20 @@
-import { AppProps } from 'next/app';
-import Head from 'next/head';
+import App from 'next/app';
+import dynamic from 'next/dynamic';
 import './styles.css';
 
-function CustomApp({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Head>
-        <title>Welcome to remote_4201!</title>
-      </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
-    </>
-  );
-}
+const page = import('../realPages/_app');
 
-export default CustomApp;
+const Page = dynamic(() => import('../realPages/_app'));
+
+//@ts-ignore
+Page.getInitialProps = async (ctx) => {
+  const appProps = await App.getInitialProps(ctx);
+
+  //@ts-ignore
+  const getInitialProps = (await page).default?.getInitialProps;
+  if (getInitialProps) {
+    return { ...appProps, ...getInitialProps(ctx) };
+  }
+  return { ...appProps };
+};
+export default Page;
