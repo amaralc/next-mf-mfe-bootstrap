@@ -5,4 +5,5 @@
 - [x] Expose page from remote;
 - [x] Consume page from remote in shell app;
 - [x] Consume styled page from remote in shell app;
+- [x] Consume statically generated page from remote in remote;
 - [] Consume statically generated page from remote in shell app;
