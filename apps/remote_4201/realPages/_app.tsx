@@ -1,4 +1,4 @@
-import { AppProps } from 'next/app';
+import App, { AppProps } from 'next/app';
 import Head from 'next/head';
 
 function RemoteApp({ Component, pageProps }: AppProps) {
@@ -13,5 +13,10 @@ function RemoteApp({ Component, pageProps }: AppProps) {
     </>
   );
 }
+
+RemoteApp.getInitialProps = async (ctx) => {
+  const appProps = await App.getInitialProps(ctx);
+  return appProps;
+};
 
 export default RemoteApp;
