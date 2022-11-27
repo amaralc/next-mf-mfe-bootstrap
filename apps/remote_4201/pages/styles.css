@@ -93,7 +93,7 @@ pre {
 }
 #hero {
   align-items: center;
-  background-color: hsla(214, 62%, 21%, 1);
+  background-color: rgb(51, 139, 255);
   border: none;
   box-sizing: border-box;
   color: rgba(55, 65, 81, 1);
