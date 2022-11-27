@@ -25,7 +25,8 @@ const nextConfig = {
             }/remoteEntry.js`,
           },
           exposes: {
-            './index': './pages/index',
+            './index': './pages/index.tsx',
+            './ssg': './pages/ssg.tsx',
             './pages-map': './pages-map.ts',
           },
           shared: {
