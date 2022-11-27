@@ -64,8 +64,12 @@ Index.getInitialProps = async () => {
     title: 'Welcome to shell_4200 👋',
     anchors: [
       {
-        label: 'Visit remote',
+        label: 'Visit hosted remote index',
         href: '/remote',
+      },
+      {
+        label: 'Visit hosted remote ssg',
+        href: '/remote-ssg',
       },
     ],
   };
