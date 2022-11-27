@@ -1,7 +1,7 @@
 {
-  "name": "shell",
+  "name": "shell_4200",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/shell",
+  "sourceRoot": "apps/shell_4200",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,12 +9,12 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "root": "apps/shell",
-        "outputPath": "dist/apps/shell"
+        "root": "apps/shell_4200",
+        "outputPath": "dist/apps/shell_4200"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/shell"
+          "outputPath": "apps/shell_4200"
         },
         "production": {}
       }
@@ -23,17 +23,17 @@
       "executor": "@nrwl/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "shell:build",
+        "buildTarget": "shell_4200:build",
         "dev": true,
         "port": 4200
       },
       "configurations": {
         "development": {
-          "buildTarget": "shell:build:development",
+          "buildTarget": "shell_4200:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "shell:build:production",
+          "buildTarget": "shell_4200:build:production",
           "dev": false
         }
       }
@@ -41,14 +41,14 @@
     "export": {
       "executor": "@nrwl/next:export",
       "options": {
-        "buildTarget": "shell:build:production"
+        "buildTarget": "shell_4200:build:production"
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/shell/jest.config.ts",
+        "jestConfig": "apps/shell_4200/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -56,7 +56,7 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/shell/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": ["apps/shell_4200/**/*.{ts,tsx,js,jsx}"]
       }
     }
   },
