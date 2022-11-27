@@ -11,6 +11,10 @@ export const StyledHero = styled.div`
   margin-top: 3.5rem;
   border-radius: 1.5rem;
 
+  a:hover {
+    background-color: #f33;
+  }
+
   .text-container {
     color: rgba(255, 255, 255, 1);
     padding: 3rem 2rem;
