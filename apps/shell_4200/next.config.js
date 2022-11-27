@@ -31,6 +31,13 @@ const nextConfig = {
             './shell-4200': './pages/index',
             './pages-map': './pages-map.ts',
           },
+          shared: {
+            '@emotion/styled': {
+              singleton: true,
+              requiredVersion: false
+            }
+          },
+
         }),
       );
 

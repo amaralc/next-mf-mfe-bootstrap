@@ -28,6 +28,12 @@ const nextConfig = {
             './index': './pages/index',
             './pages-map': './pages-map.ts',
           },
+          shared: {
+            '@emotion/styled': {
+              singleton: true,
+              requiredVersion: false
+            }
+          },
         }),
       );
 
