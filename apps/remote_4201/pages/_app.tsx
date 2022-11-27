@@ -6,7 +6,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Welcome to remote-4201!</title>
+        <title>Welcome to remote_4201!</title>
       </Head>
       <main className="app">
         <Component {...pageProps} />
